@@ -1,5 +1,5 @@
 const path = require('path');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
@@ -8,12 +8,12 @@ module.exports = {
     app: './src/index.js'
   },
   plugins: [
-    new CleanWebpackPlugin(['dist']),
+    new CleanWebpackPlugin(['dist/*']),
     new HtmlWebpackPlugin({
       title: 'Production',
       template: 'public/index.html'
     }),
-    new ExtractTextPlugin("styles.bundle.css"),
+//    new ExtractTextPlugin("styles.bundle.css"),
   ],
   output: {
     filename: '[name].bundle.js',
