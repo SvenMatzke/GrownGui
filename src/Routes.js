@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import {store} from './reducer.js';
 import {post_settings} from './rest_request.js';
-import TextField from 'material-ui/TextField';
-import Button from 'material-ui/Button';
+import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
 import PropTypes from 'prop-types';
-import { withStyles } from 'material-ui/styles';
+import { withStyles } from '@material-ui/core/styles';
 import {LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'recharts';
 import {get_settings, get_sensor_history} from './rest_request.js';
 

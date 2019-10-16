@@ -1,24 +1,28 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
-import {MuiThemeProvider, createMuiTheme } from 'material-ui/styles';
-import green from 'material-ui/colors/green';
-import List, { ListItem, ListItemIcon, ListItemText, ListSubheader } from 'material-ui/List';
+import {MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import green from '@material-ui/core/colors/green';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
+import ListSubheader from '@material-ui/core/ListSubheader';
 import PropTypes from 'prop-types';
-import { withStyles } from 'material-ui/styles';
-import Drawer from 'material-ui/Drawer';
-import AppBar from 'material-ui/AppBar';
-import Toolbar from 'material-ui/Toolbar';
-import Typography from 'material-ui/Typography';
-import Divider from 'material-ui/Divider';
-import TimelineIcon from 'material-ui-icons/Timeline';
-import SettingsIcon from 'material-ui-icons/Settings';
-import IconButton from 'material-ui/IconButton';
-import LightIcon from 'material-ui-icons/WbSunny';
-import TemperatureIcon from 'material-ui-icons/Whatshot';
-import PlantIcon from 'material-ui-icons/LocalFlorist';
-import HumidityIcon from 'material-ui-icons/Opacity';
-import DeepsleepIcon from 'material-ui-icons/Snooze';
-import ReloadIcon from 'material-ui-icons/Loop';
+import { withStyles } from '@material-ui/core/styles';
+import Drawer from '@material-ui/core/Drawer';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import Divider from '@material-ui/core/Divider';
+import TimelineIcon from '@material-ui/icons/Timeline';
+import SettingsIcon from '@material-ui/icons/Settings';
+import IconButton from '@material-ui/core/IconButton';
+import LightIcon from '@material-ui/icons/WbSunny';
+import TemperatureIcon from '@material-ui/icons/Whatshot';
+import PlantIcon from '@material-ui/icons/LocalFlorist';
+import HumidityIcon from '@material-ui/icons/Opacity';
+import DeepsleepIcon from '@material-ui/icons/Snooze';
+import ReloadIcon from '@material-ui/icons/Loop';
 
 import {store} from './reducer.js';
 import {Home, Settings} from './Routes';
@@ -192,7 +196,8 @@ class App extends Component {
     }
 
     render(){
-      return (<MuiThemeProvider theme={theme}>
+      return (
+        <MuiThemeProvider theme={theme}>
           <Menue set_deep_sleep={this.set_deep_sleep} reload={this.reload}/>
         </MuiThemeProvider>
       )

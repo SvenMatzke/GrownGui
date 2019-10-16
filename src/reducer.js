@@ -44,7 +44,7 @@ const sensorReducer = (state = initialState.data, action) => {
 const sensorHistoryReducer = (state = initialState.sensor_history, action) => {
     switch(action.type){
         case 'SENSOR_DATA_HISTORY':
-            return [... action.data];
+            return [...action.data];
         default:
             return state;
     }
@@ -62,7 +62,7 @@ const settingsReducer = (state = initialState.settings, action) => {
 const errorReducer = (state = initialState.errormessages, action) => {
   switch(action.type){
       case 'ADD_ERROR':
-          return [... action.data];
+          return [...action.data];
       default:
           return state;
   }
