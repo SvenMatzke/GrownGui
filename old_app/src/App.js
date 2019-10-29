@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import {MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import green from '@material-ui/core/colors/green';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
