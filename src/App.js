@@ -10,7 +10,9 @@ import {useStyles, theme} from './components/styles';
 import LeftSidebar from './components/sidebar';
 import Headline from './components/headline';
 import {MuiThemeProvider} from '@material-ui/core/styles';
-import {Overview} from './components/overview';
+import Overview from './components/overview';
+import Devices from './components/devices';
+import {getSensorData} from './requests/grownSensor';
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
@@ -26,8 +28,9 @@ function Copyright() {
 
 export default function App() {
   const classes = useStyles();
-  
-   const [open, setOpen] = React.useState(false);
+  const data_address = "http://192.168.2.51"
+  getSensorData(data_address)
+  const [open, setOpen] = React.useState(false);
  
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -49,6 +52,7 @@ export default function App() {
             <Container maxWidth="lg" className={classes.container}>
               <Switch>
                 <Route exact path="/" component={Overview}/>
+                <Route exact path="/devices" component={Devices}/>
               </Switch>
             </Container>
             <Copyright></Copyright>

@@ -10,7 +10,7 @@ import NotificationsIcon from '@material-ui/icons/Notifications';
 import SettingsIcon from '@material-ui/icons/Settings';
 import AddIcon from '@material-ui/icons/Add';
 import {headlineStyles} from './styles';
-
+import { Link } from 'react-router-dom';
 
 export default function Headline(props){
     const classes = headlineStyles();
@@ -26,20 +26,28 @@ export default function Headline(props){
           >
             <MenuIcon />
           </IconButton>
+          
           <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
-            Grown
+            <Link to="/">Grown</Link>
           </Typography>
-          <IconButton color="inherit">         
-              <AddIcon />
-          </IconButton>
-          <IconButton color="inherit">
-            <Badge badgeContent={0} color="secondary">
-              <NotificationsIcon />
-            </Badge>
-          </IconButton>
-          <IconButton color="inherit">
-              <SettingsIcon />
-          </IconButton>
+          
+          <Link to="/devices">
+            <IconButton color="inherit">         
+                <AddIcon />
+            </IconButton>
+          </Link>
+          <Link to="/notifications">
+            <IconButton color="inherit">
+              <Badge badgeContent={0} color="secondary">
+                <NotificationsIcon />
+              </Badge>
+            </IconButton>
+          </Link>
+          <Link to="/settings">
+            <IconButton color="inherit">
+                <SettingsIcon />
+            </IconButton>
+          </Link>
         </Toolbar>
       </AppBar>
     );

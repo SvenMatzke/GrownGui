@@ -1,5 +1,12 @@
 import {combineReducers} from 'redux';
-/* import data from './dataReducer'; */
+import {dataReducer} from './data_reducer';
+import {createStore, applyMiddleware} from 'redux';
+import reduxThunk from 'redux-thunk';
 
-export default combineReducers({
+const reducers = combineReducers({
+    sensorData: dataReducer
 });
+
+const store = createStore(reducers, {}, applyMiddleware(reduxThunk));
+
+export {store};
