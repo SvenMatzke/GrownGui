@@ -19,7 +19,7 @@
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
     "eject": "react-app-rewired eject",
-    "start-sw": "http-server ./build -d --cors "
+    "start2": "serve -s build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -40,6 +40,7 @@
   "devDependencies": {
     "http-server": "^0.11.1",
     "react-app-rewired": "^2.1.4",
+    "serve": "^11.2.0",
     "workbox-webpack-plugin": "^4.3.1"
   }
 }

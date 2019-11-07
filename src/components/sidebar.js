@@ -1,6 +1,5 @@
 import React from 'react';
 import clsx from 'clsx';
-
 import Drawer from '@material-ui/core/Drawer';
 import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
@@ -10,19 +9,19 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import LocalFloristIcon from '@material-ui/icons/LocalFlorist';
-import {drawerStyles} from './styles';
+
 
 export default function LeftSidebar(props){
-    const classes = drawerStyles();
+    
     return (
     <Drawer
         variant="permanent"
         classes={{
-          paper: clsx(classes.drawerPaper, !props.open && classes.drawerPaperClose),
+          paper: clsx(props.style.drawerPaper, !props.open && props.style.drawerPaperClose),
         }}
         open={props.open}
       >
-        <div className={classes.toolbarIcon}>
+        <div className={props.style.toolbarIcon}>
           <IconButton onClick={props.drawer_close}>
             <ChevronLeftIcon />
           </IconButton>

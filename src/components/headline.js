@@ -9,25 +9,24 @@ import Badge from '@material-ui/core/Badge';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import SettingsIcon from '@material-ui/icons/Settings';
 import AddIcon from '@material-ui/icons/Add';
-import {headlineStyles} from './styles';
+
 import { Link } from 'react-router-dom';
 
 export default function Headline(props){
-    const classes = headlineStyles();
+
     return (
-      <AppBar position="absolute" className={clsx(classes.appBar, props.open && classes.appBarShift)}>
-        <Toolbar className={classes.toolbar}>
+      <AppBar position="absolute" className={clsx(props.style.appBar, props.open && props.style.appBarShift)}>
+        <Toolbar className={props.style.toolbar}>
           <IconButton
             edge="start"
             color="inherit"
             aria-label="open drawer"
             onClick={props.drawer_open}
-            className={clsx(classes.menuButton, props.open && classes.menuButtonHidden)}
+            className={clsx(props.style.menuButton, props.open && props.style.menuButtonHidden)}
           >
             <MenuIcon />
-          </IconButton>
-          
-          <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
+          </IconButton>       
+          <Typography component="h1" variant="h6" color="inherit" noWrap className={props.style.title}>
             <Link to="/">Grown</Link>
           </Typography>
           
