@@ -19,7 +19,8 @@
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
     "eject": "react-app-rewired eject",
-    "start2": "serve -s build"
+    "reinstall-ssl": "SET REINSTALL=true & SET PORT=80 & serve",
+    "start2": "SET PORT=80 & serve build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -38,7 +39,7 @@
     ]
   },
   "devDependencies": {
-    "http-server": "^0.11.1",
+    "https-localhost": "^4.4.1",
     "react-app-rewired": "^2.1.4",
     "serve": "^11.2.0",
     "workbox-webpack-plugin": "^4.3.1"

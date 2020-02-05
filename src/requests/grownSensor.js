@@ -16,5 +16,5 @@ export function getSensorData(host){
         store.dispatch(dataActions.addSensorData(newData))
     }).catch((err) => {
         /* store.dispatch(actions.addError(err.message)) */
-    });
+    });   
 }
